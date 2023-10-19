@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Roboto+Condensed:wght@300;400;700&display=swap');
+
+:root {
+  --primary-dark: #05adf6;
+  --primary-light: #64d6fa;
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+.icon {
+  color: var(--primary-dark);
+}
+
+@layer base {
+  body {
+    @apply font-[Poppins];
+  }
+  li {
+    @apply p-4 text-lg lg:text-xl;
+  }
+
+  h1 {
+    @apply text-4xl md:text-5xl font-bold;
+  }
+
+  h2 {
+    @apply text-2xl md:text-3xl font-bold;
+  }
+
+  h3 {
+    @apply text-xl font-bold;
+  }
+
+  button {
+    @apply p-3 border bg-gradient-to-r from-[var(--primary-dark)] to-[var(--primary-light)]  text-white rounded-md;
+  }
+
+  .icon {
+    @apply text-2xl cursor-pointer  hover:scale-150 ease-in-out duration-300;
+  }
+}
