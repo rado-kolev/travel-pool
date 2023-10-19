@@ -55,22 +55,22 @@ const Navbar = () => {
         onClick={handleNav}
         className={
           nav
-            ? 'absolute left-0 top-0 w-full bg-gray-100/90 px-4 py-6 flex flex-col text-black'
-            : 'absolute left-[-100%]'
+            ? 'fixed top-0 left-0 w-full h-screen bg-white px-4 py-6 flex flex-col text-black transition-transform transform translate-y-0 transition-duration-1500'
+            : 'fixed top-0 left-0 w-full h-screen bg-white px-4 py-6 flex flex-col text-black transition-transform transform -translate-y-full transition-duration-1500'
         }
       >
         <ul>
           <h1>TravelPool</h1>
-          <li className='border-b'>Home</li>
+          <li className='border-b mt-8'>Home</li>
           <li className='border-b'>Destinations</li>
           <li className='border-b'>Travel</li>
           <li className='border-b'>View</li>
-          <li>Book</li>
+          <li className='mb-8'>Book</li>
           <div className='flex flex-col'>
-            <button className='my-6'>Search</button>
-            <button>Account</button>
+            <button>Search</button>
+            <button className='mt-6 mb-12'>Account</button>
           </div>
-          <div className='flex justify-between my-8'>
+          <div className='flex justify-between'>
             <FaFacebook className='icon' />
             <FaTwitter className='icon' />
             <FaInstagram className='icon' />
